@@ -1,29 +1,183 @@
-body {
-    background: linear-gradient(to bottom, #1a1a1a, #333);
-    font-family: 'Arial', sans-serif;
-    color: #fff;
-    text-align: center;
-    padding: 50px;
-}
-
-h1 {
-    font-size: 3em;
-    color: #ff77aa;
-    margin-bottom: 20px;
-}
-
-.login-form {
-    margin-top: 50px;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 10px;
-    display: inline-block;
+/* Make the canvas take up the entire screen */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background-color: black;
 }
 
 canvas {
     display: block;
-    margin: 0 auto;
-    width: 100%;
-    height: 400px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     background-color: black;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Styling for the intro GIF */
+.intro-gif {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+}
+
+.intro-gif img {
+    width: 300px;
+}
+
+
+#birthdayMessage {
+    display: flex;
+    justify-content: center;    /* Center content horizontally */
+    align-items: center;        /* Center content vertically */
+    height: 100vh;              /* Full viewport height to center vertically */
+    position: fixed;            /* Keep it in view and centered */
+    flex-direction: column;     /* Stack messages vertically */
+    text-align: center;         /* Center text within each message */
+    width: 100%;                /* Ensure full width for proper centering */
+    top: 0;                     /* Align to the top for fixed position */
+}
+
+span p {
+    margin: 0;                  /* Remove default margin */
+    text-wrap: none;            /* Prevent wrapping */
+}
+
+#birthdayMessage .outer {
+    display: inline-block;      /* Ensure each message stays on its own line */
+    opacity: 0;                 /* Hide initially */
+    font-size: 1.1em;           /* Increase font size for better readability */
+    color: white;
+    position: absolute;         /* Absolute positioning for centering */
+    left: 50%;                  /* Horizontal center */
+    top: 50%;                   /* Vertical center */
+    transform: translate(-50%, -50%);  /* Shift back by 50% of the element's height and width to truly center it */
+    width: 95%;                /* Full width */
+    transition: opacity 1s ease; /* Transition for fade in/out */
+}
+
+
+.letter {
+    display: inline-block;      /* Display each letter on the same line */
+    opacity: 0;
+    animation: fadeInLetter 0.05s forwards;  /* Each letter will fade in */
+}
+
+@keyframes fadeInLetter {
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Image Elements */
+.birthday-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0 auto;
+    transition: opacity 1s ease-in-out;  /* Smooth fade-in/out for images */
+    opacity: 0;  /* Initially hidden */
+}
+
+
+
+
+@font-face {
+    font-family: 'Whatnot';
+    src: url('fonts/what.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Use the custom font for the entire website */
+body, h1, p {
+    font-family: 'Whatnot', sans-serif;  /* Apply the custom font */
+}
+
+/* Example styling for h1 and p */
+h1 {
+    font-size: 3em;
+    color: #fff;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+
+#max {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1s ease-in-out; /* Smooth fade-in effect */
+}
+
+
+#polaroidLogin {
+    background-color: white;
+    padding: 20px;
+    width: 300px;
+    margin: 20px auto;
+    text-align: center;
+    border: 10px solid #fff; /* White border to simulate Polaroid */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+}
+
+.image-container {
+    width: 300px; /* Desired square size */
+    height: 300px;
+    overflow: hidden; /* Ensures that image doesn't overflow the div */
+    position: relative;
+    margin-bottom: 10px; /* Space between image and text */
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the div while maintaining aspect ratio */  
+    opacity: 0; /* Initially hidden */
+    transition: opacity 2s ease-in-out; /* Smooth transition over 2 seconds */
+  } 
+  
+
+/* Text under the image (Steam credentials) */
+.polaroid p {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Username and Password details */
+.polaroid span {
+    font-weight: bold;
+}
+
+/* Hiding the form initially */
+.login-form {
+    display: none;
+    position: absolute;
+    top: -100%; /* Initially off-screen (above the viewport) */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0; /* Initially invisible */
+    transition: top 1s ease-in-out, opacity 1s ease-in-out; /* Smooth slide-in and fade-in */
+}
+
+/* This class will be added to trigger the sliding effect */
+.show-login-form {
+    top: 50%; /* Final position at the center of the screen */
+    opacity: 1; /* Fully visible */
 }
