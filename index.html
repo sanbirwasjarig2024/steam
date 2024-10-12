@@ -3,32 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Success!</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-            background-color: #f4f4f4;
-        }
-        .container {
-            max-width: 600px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #1db954;
-        }
-    </style>
+    <title>Life is Strange Inspired Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="container">
-        <h1>Scannen van QR code Succesvol!</h1>
-        <p>Bezig met het ophalen van gegevens en het verwerken van uw data. Even geduld aub...</p>
-        <p>Over enkele seconden ontvangt u een e-mail met verdere informatie.</p>
-        <p><a href="mailto:" style="color: #1db954; text-decoration: none;">Open uw e-mail</a></p>
+        <h1>Welcome to Life is Strange World</h1>
+        <canvas id="animationCanvas"></canvas>
+
+        <div class="login-form">
+            <h2>Access your Steam Credentials</h2>
+            <p>Use the following credentials to access Steam:</p>
+            <ul>
+                <li>Username: <span id="username">user123</span></li>
+                <li>Password: <span id="password">password123</span></li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>
