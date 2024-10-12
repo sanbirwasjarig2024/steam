@@ -8,18 +8,66 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="container">
+    <!-- Container for the GIF intro -->
+    <div class="intro-gif">
+        <img id="introGif" src="img/rewind.gif" alt="Intro GIF" />
+    </div>
+
+    <div id="birthdayMessage" class="message" style="display: none;">
+        <span class="outer" id="message1"><h1>Beste Sanbir,</h1></span>
+        <span class="outer" id="message2"><p>Je bent alweer een jaartje ouder..</p></span>
+        <span class="outer" id="message3"><p>Wat gaat de tijd toch snel voorbij</p></span>
+        <span class="outer" id="message4"><p>Tijd...         </p></span>
+        <span class="outer" id="message5"><p>Het glipt door onze vingers, maar het laat altijd sporen na</p></span>
+        <span class="outer" id="message6"><p>Sporen van keuzes die wij zelf maken</p></span>
+        <span class="outer" id="message7"><p>Heb je opgelet de afgelopen dagen?</p></span>
+        <span class="outer" id="message8"><p>Weet je welke week het is?</p></span>
+        <span class="outer" id="message10"><p>Twee manen...</p></span>
+        
+        <!-- Image for Moons -->
+        <img id="moon1" class="birthday-image" src="img/manen.png" alt="Moon 1" style="display: none;" />
+        
+        <span class="outer" id="message12"><p>Stormen..</p></span>
+    
+        <!-- Image for Hurricanes -->
+        <img id="hurricanes" class="birthday-image" src="img/orkanen.png" alt="Hurricanes" style="display: none;" />
+    
+        <span class="outer" id="message14"><p>11 October was deze vrijdag</p></span>
+    
+        <!-- Image for Calendar -->
+        <img id="calendar" class="birthday-image" src="img/kalender.png" alt="Calendar" style="display: none;" />
+    
+        <span class="outer" id="message16"><p>Bijzonder hoe de tijd zich lijkt te herhalen, ondanks de verschillen</p></span>
+
+        <img id="max_rewind1" class="birthday-image" src="img/max_rewind1.png" alt="Max" style="display: none;" />
+
+        <span class="outer" id="message18"><p>Maar sommige dingen veranderen nooit</p></span>
+
+        <img id="max_rewind2" class="birthday-image" src="img/max_rewind2.png" alt="Max" style="display: none;" />
+
+        <span class="outer" id="message19"><p>Maak je klaar, Sanbir</p></span>
+        <span class="outer" id="message20"><p>Het verhaal gaat verder</p></span>
+    </div>
+    
+
+    <img id="max" class="birthday-image" src="img/maxfoto.png" alt="Max" style="display: none;" />
+    
+
+    <!-- Main container hidden at first -->
+    <div class="container" style="display: none;">
         <h1>Welcome to Life is Strange World</h1>
         <canvas id="animationCanvas"></canvas>
 
-        <div class="login-form">
-            <h2>Access your Steam Credentials</h2>
-            <p>Use the following credentials to access Steam:</p>
-            <ul>
-                <li>Username: <span id="username">user123</span></li>
-                <li>Password: <span id="password">password123</span></li>
-            </ul>
+        <div class="login-form" style="display: none;">
+            <div class="polaroid" id="polaroidLogin">
+                <div class="image-container">
+                    <img src="img/steam2.png" alt="Polaroid Image">
+                </div>
+                <p>Username: <span>user123</span></p>
+                <p>Password: <span>password123</span></p>
+            </div>
         </div>
     </div>
+    
 </body>
 </html>
