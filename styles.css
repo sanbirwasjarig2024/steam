@@ -149,7 +149,7 @@ p {
     height: 100%;
     object-fit: cover; /* Ensures the image covers the div while maintaining aspect ratio */  
     opacity: 0; /* Initially hidden */
-    transition: opacity 5s ease-in-out; /* Smooth transition over 2 seconds */
+    transition: opacity 3s ease-in-out; /* Smooth transition over 2 seconds */
   } 
   
 
