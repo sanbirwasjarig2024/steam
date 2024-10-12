@@ -148,7 +148,7 @@ function showBirthdayMessages() {
                     setTimeout(() => {
                         nextElement.style.display = 'block'; // Ensure the image is visible
                         setTimeout(() => {
-                            nextElement.style.opacity = 0.5; // Set image opacity to 0.5 (semi-transparent)
+                            nextElement.style.opacity = 0.8; // Set image opacity to 0.5 (semi-transparent)
                         }, 10);  // Small delay to allow CSS transition to work
                     }, textLength * 50);  // Show the image halfway through the text animation
                 }
@@ -158,7 +158,7 @@ function showBirthdayMessages() {
             setTimeout(() => {
                 element.style.display = 'block'; // Ensure it's visible
                 setTimeout(() => {
-                    element.style.opacity = 0.5; // Smooth fade-in with semi-transparent opacity
+                    element.style.opacity = 0.8; // Smooth fade-in with semi-transparent opacity
                 }, 10);  // Give a tiny delay to allow CSS transition to work
             }, delay);
         }
@@ -169,7 +169,7 @@ function showBirthdayMessages() {
         }, delay + displayTime);
 
         // Update the delay for the next element
-        delay += displayTime + 500;  // Add buffer time (e.g., 500ms) between elements
+        delay += displayTime + 600;  // Add buffer time (e.g., 500ms) between elements
     });
 
     // When the birthday messages finish, do not trigger Max photo effect or anything else here.
@@ -276,6 +276,7 @@ function showLoginForm() {
     setTimeout(() => {
         // Step 3: Add the class that triggers the sliding and fade-in animation
         loginForm.classList.add('show-login-form');
+        fadeInImage();  // Fade in the image after the form slides in
     }, 10); // Small delay to ensure CSS transition kicks in
 }
 

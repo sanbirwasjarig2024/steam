@@ -57,7 +57,7 @@ span p {
 #birthdayMessage .outer {
     display: inline-block;      /* Ensure each message stays on its own line */
     opacity: 0;                 /* Hide initially */
-    font-size: 1.1em;           /* Increase font size for better readability */
+    font-size: 1.2em;           /* Increase font size for better readability */
     color: white;
     position: absolute;         /* Absolute positioning for centering */
     left: 50%;                  /* Horizontal center */
@@ -138,10 +138,10 @@ p {
 
 .image-container {
     width: 300px; /* Desired square size */
-    height: 300px;
+    height: 390px;
     overflow: hidden; /* Ensures that image doesn't overflow the div */
     position: relative;
-    margin-bottom: 10px; /* Space between image and text */
+    margin-bottom: 5px; /* Space between image and text */
   }
   
   .image-container img {
@@ -149,7 +149,7 @@ p {
     height: 100%;
     object-fit: cover; /* Ensures the image covers the div while maintaining aspect ratio */  
     opacity: 0; /* Initially hidden */
-    transition: opacity 2s ease-in-out; /* Smooth transition over 2 seconds */
+    transition: opacity 5s ease-in-out; /* Smooth transition over 2 seconds */
   } 
   
 
@@ -173,7 +173,7 @@ p {
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0; /* Initially invisible */
-    transition: top 1s ease-in-out, opacity 1s ease-in-out; /* Smooth slide-in and fade-in */
+    transition: top 0.5s ease-in-out, opacity 1s ease-in-out; /* Smooth slide-in and fade-in */
 }
 
 /* This class will be added to trigger the sliding effect */
