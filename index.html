@@ -22,33 +22,6 @@
             color: #1db954;
         }
     </style>
-    <script>
-        function triggerWebhook() {
-        fetch("https://maker.ifttt.com/trigger/qr_code_scanned/with/key/rzQicq6Y4PvBLHJI3sH8d", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ "value1": "Triggered via GitHub Page" })
-        })
-        .then(response => {
-            if (response.ok) {
-                console.log("Webhook triggered successfully.");
-            } else {
-                console.error("Failed to trigger webhook.");
-            }
-        })
-        .catch(error => {
-            console.error("Error:", error);
-        });
-    }
-    
-    window.onload = function() {
-        console.log("Triggering webhook...");
-        triggerWebhook();
-    }
-
-    </script>
 </head>
 <body>
     <div class="container">
